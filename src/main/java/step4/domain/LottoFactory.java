@@ -10,7 +10,9 @@ import java.util.stream.IntStream;
 public class LottoFactory {
 
     private static final int PICK_COUNT = 6;
-    private static final List<LottoNo> LOTTO_NOS = IntStream.rangeClosed(LottoConfig.FIRST_LOTTO_NUMBER, LottoConfig.LAST_LOTTO_NUMBER)
+    public static final int FIRST_LOTTO_NUMBER = 1;
+    public static final int LAST_LOTTO_NUMBER = 45;
+    private static final List<LottoNo> LOTTO_NOS = IntStream.rangeClosed(FIRST_LOTTO_NUMBER, LAST_LOTTO_NUMBER)
             .mapToObj(LottoNo::new)
             .collect(Collectors.toList());
 
